@@ -21,7 +21,7 @@ function wltwitter_block($op = 'list', $delta = 0) {
         case 0:
           return array(
             'subject' => 'Friss csiripek',
-            'content' => '<div class="hfeed" id="block-wltwitter-list"><em>Csiripek betöltése&hellip;</em></div><div class="more-link"><a rel="external" href="http://search.twitter.com/search?q=%23weblabor">további csiripek&raquo;</a></div>'
+            'content' => '<a class="twitter-timeline" href="https://twitter.com/search?q=%23weblabor" data-widget-id="357431199452520449" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="5">Tweetek erről: "#weblabor"</a>'
           );
       }
       break;
@@ -35,7 +35,7 @@ function wltwitter_block($op = 'list', $delta = 0) {
  * oldal betöltése.
  */
 function wltwitter_footer($main = 0) {
-  return '<script type="text/javascript" src="/misc/wltwitter.js"></script><script type="text/javascript" src="http://search.twitter.com/search.json?q=%23weblabor&amp;rpp=5&amp;callback=Drupal.twitterWidget"></script>';
+  return '<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
 }
 
 /**
